@@ -1,0 +1,8 @@
+[package]
+name = "speedcube_domain"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+twips = "0.12.2"
+serde = { version = "1.0", features = ["derive"] }

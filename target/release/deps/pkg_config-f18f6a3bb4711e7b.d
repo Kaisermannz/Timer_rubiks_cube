@@ -1,0 +1,7 @@
+/home/kaisermann/speedcube_pwa/target/release/deps/pkg_config-f18f6a3bb4711e7b.d: /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.33/src/lib.rs
+
+/home/kaisermann/speedcube_pwa/target/release/deps/libpkg_config-f18f6a3bb4711e7b.rlib: /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.33/src/lib.rs
+
+/home/kaisermann/speedcube_pwa/target/release/deps/libpkg_config-f18f6a3bb4711e7b.rmeta: /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.33/src/lib.rs
+
+/home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/pkg-config-0.3.33/src/lib.rs:

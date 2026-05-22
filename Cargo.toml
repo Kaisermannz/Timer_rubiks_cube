@@ -1,0 +1,8 @@
+# /speedcube_pwa/Cargo.toml
+[workspace]
+members = [
+    "crates/speedcube_domain",
+    "crates/speedcube_db",
+    "crates/speedcube_api"
+]
+resolver = "2"

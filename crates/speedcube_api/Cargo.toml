@@ -1,0 +1,13 @@
+[package]
+name = "speedcube_api"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+speedcube_domain = { path = "../speedcube_domain" }
+speedcube_db = { path = "../speedcube_db" }
+tokio = { version = "1", features = ["full"] }
+axum = "0.7"                                        # <-- El framework web
+serde = { version = "1.0", features = ["derive"] }  # <-- Para leer JSON
+sqlx = "0.7"
+tower-http = { version = "0.5", features = ["fs", "cors"] }

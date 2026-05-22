@@ -1,0 +1,7 @@
+/home/kaisermann/speedcube_pwa/target/debug/deps/tokio_macros-2cd5f5ecd2433418.d: /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/lib.rs /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/entry.rs /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/select.rs
+
+/home/kaisermann/speedcube_pwa/target/debug/deps/libtokio_macros-2cd5f5ecd2433418.so: /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/lib.rs /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/entry.rs /home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/select.rs
+
+/home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/lib.rs:
+/home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/entry.rs:
+/home/kaisermann/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-macros-2.7.0/src/select.rs:

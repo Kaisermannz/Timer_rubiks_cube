@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  speedcube_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: speedcube_pwa
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=sqlite:///app/data/speedcube_data.db
+    volumes:
+      # Lado izquierdo: Tu disco duro grande en el NAS
+      # Lado derecho: La carpeta interna dentro del contenedor de Distroless
+      - /srv/dev-disk-by-uuid-dd861e6e-33fe-46f6-a1e1-c69ac23500c0/dockers/speedcube/data:/app/data
+    restart: unless-stopped

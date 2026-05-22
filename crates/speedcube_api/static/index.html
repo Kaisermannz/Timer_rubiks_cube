@@ -452,6 +452,9 @@
             <!-- ─── Timer zone ─────────────────────────────────────── -->
             <section
                 class="flex-1 flex flex-col items-center justify-center px-8 py-6 relative"
+                @touchstart="handleTouchstart($event)"
+                @touchend="handleTouchend($event)"
+                @contextmenu.prevent
             >
                 <!-- Scramble (hidden when running) -->
                 <div
@@ -778,6 +781,44 @@
                             }
                         }
                     },
+                    /* ── Touch (Móviles) ─────────────────────── */
+                                        handleTouchstart(e) {
+                                            // Evita comportamientos raros del navegador al tocar
+                                            e.preventDefault();
+
+                                            if (this.running) {
+                                                this.stopTimer();
+                                            } else if (this.inspection && !this.isReady) {
+                                                this.time = 0;
+                                                this.isReady = true;
+                                                this.readyStartTime = Date.now();
+                                            } else if (!this.inspection && !this.isReady) {
+                                                this.inspection = true;
+                                                this.inspectionTime = 15000;
+                                                this.inspectionInterval = setInterval(() => {
+                                                    this.inspectionTime -= 10;
+                                                    if (this.inspectionTime <= 0) {
+                                                        this.handleDNF();
+                                                    }
+                                                }, 10);
+                                            }
+                                        },
+
+                                        handleTouchend(e) {
+                                            // Solo procesamos el soltar si estábamos en estado 'Ready'
+                                            if (this.isReady) {
+                                                const held = Date.now() - this.readyStartTime;
+                                                this.isReady = false;
+
+                                                // 200ms de protección, igual que en PC
+                                                if (held >= 200) {
+                                                    this.inspection = false;
+                                                    clearInterval(this.inspectionInterval);
+                                                    this.inspectionInterval = null;
+                                                    this.startTimer();
+                                                }
+                                            }
+                                        },
 
                     /* ── Timer controls ──────────────────── */
                     startTimer() {

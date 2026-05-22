@@ -1,7 +1,7 @@
 # ========================================================
 # ETAPA 1: Planificador (cargo-chef)
 # ========================================================
-FROM rust:1.75-slim as planner
+FROM rust:1.78 as planner
 WORKDIR /app
 RUN cargo install cargo-chef
 COPY . .
@@ -10,7 +10,7 @@ RUN cargo chef prepare --recipe-path recipe.json
 # ========================================================
 # ETAPA 2: Caché de dependencias
 # ========================================================
-FROM rust:1.75-slim as cacher
+FROM rust:1.78 as cacher
 WORKDIR /app
 RUN cargo install cargo-chef
 COPY --from=planner /app/recipe.json recipe.json
@@ -20,7 +20,7 @@ RUN cargo chef cook --release --recipe-path recipe.json
 # ========================================================
 # ETAPA 3: Compilación del binario
 # ========================================================
-FROM rust:1.75-slim as builder
+FROM rust:1.78 as builder
 WORKDIR /app
 COPY . .
 # Copiamos la caché de la etapa anterior
